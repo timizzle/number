@@ -7,16 +7,16 @@ var	bingo = []
 var guesses = []
 
 function numberEvaluation () {
-  document.getElementById("guessForm").onsubmit = function (event) {
-    console.log(event)
-	var guess = event.target.value;
-	var newGuess = parseInt(guess);
-	if (isNaN(newGuess)) {
-	  alert("Silly goose. Put a real number.")
-	} else {
-	  if (newGuess==number) {
-	    alert("Awesome. You guessed it")
-	  }
+	document.getElementById("guessForm").onsubmit = function (event) {
+	 var guess = document.getElementById("guess").value;
+	 var newGuess = parseInt(guess);
+			if (isNaN(newGuess)) {
+			alert("Silly goose. Put a real number.")
+		}
+		else {
+		if (newGuess==number) {
+		alert("Awesome. You guessed it")
+		}
 	else if (newGuess>number) {
 		alert("A little high there bud. Try something lower")
 		}
